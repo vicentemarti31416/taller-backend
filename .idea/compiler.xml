@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservicio-config" />
+        <module name="microservicio-eureka" />
         <module name="microservicio-users" />
         <module name="microservicio-cars" />
         <module name="microservicio-bikes" />
@@ -17,6 +18,7 @@
       <module name="microservicio-bikes" target="19" />
       <module name="microservicio-cars" target="19" />
       <module name="microservicio-config" target="19" />
+      <module name="microservicio-eureka" target="19" />
       <module name="microservicio-users" target="19" />
     </bytecodeTargetLevel>
   </component>
@@ -25,6 +27,7 @@
       <module name="microservicio-bikes" options="-parameters" />
       <module name="microservicio-cars" options="-parameters" />
       <module name="microservicio-config" options="-parameters" />
+      <module name="microservicio-eureka" options="-parameters" />
       <module name="microservicio-users" options="-parameters" />
     </option>
   </component>
