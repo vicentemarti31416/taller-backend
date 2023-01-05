@@ -8,8 +8,7 @@ spring:
       uri: http://localhost:8004
 eureka:
   instance:
-    instance:
-      id: ${spring.application.name}:${random.value}
+    instance-id: ${spring.application.name}:${random.value}
   client:
     fetch-registry: true
     register-with-eureka: true
