@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservicio-users" />
+        <module name="microservicio-cars" />
+        <module name="microservicio-bikes" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservicio-bikes" target="19" />
+      <module name="microservicio-cars" target="19" />
+      <module name="microservicio-users" target="19" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="microservicio-bikes" options="-parameters" />
+      <module name="microservicio-cars" options="-parameters" />
+      <module name="microservicio-users" options="-parameters" />
+    </option>
+  </component>
+</project>
