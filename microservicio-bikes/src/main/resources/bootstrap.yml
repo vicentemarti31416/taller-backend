@@ -20,3 +20,5 @@ spring:
 logging:
   level:
     sql: debug
+
+
