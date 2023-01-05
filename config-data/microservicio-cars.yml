@@ -1,0 +1,8 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: microservicio-cars
+  cloud:
+    config:
+      uri: http://localhost:8004

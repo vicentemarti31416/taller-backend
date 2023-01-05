@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: microservicio-bikes
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8004
+  datasource:
+    url: jdbc:mysql://localhost:3306/taller?serverTimezone=Europe/Madrid
+    username: root
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+logging:
+  level:
+    sql: debug
