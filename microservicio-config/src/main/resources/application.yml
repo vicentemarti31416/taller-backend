@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: eureka
+          default-label: gateway
           uri: https://github.com/vicentemarti31416/taller-backend.git
           search-paths: config-data
           username: vicentemarti31416

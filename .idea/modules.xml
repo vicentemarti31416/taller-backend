@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/microservicio-cars/microservicio-cars.iml" filepath="$PROJECT_DIR$/microservicio-cars/microservicio-cars.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservicio-config/microservicio-config.iml" filepath="$PROJECT_DIR$/microservicio-config/microservicio-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservicio-eureka/microservicio-eureka.iml" filepath="$PROJECT_DIR$/microservicio-eureka/microservicio-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicio-gateway/microservicio-gateway.iml" filepath="$PROJECT_DIR$/microservicio-gateway/microservicio-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservicio-users/microservicio-users.iml" filepath="$PROJECT_DIR$/microservicio-users/microservicio-users.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/taller-backend.iml" filepath="$PROJECT_DIR$/.idea/taller-backend.iml" />
     </modules>

@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/microservicio-config/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-users/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-users/src/main/resources" charset="UTF-8" />
   </component>
