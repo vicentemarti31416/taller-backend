@@ -1,5 +1,6 @@
 package vicente.marti.microserviciousers.controller;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,7 @@ public class UserController {
         return ResponseEntity.ok(userService.findAll());
     }
 
+    @CircuitBreaker(name = "all", fallbackMethod = "fallBackFindAllVehicles")
     @GetMapping("/vehicles/{userId}")
     public ResponseEntity<?> findAllVehicles(@PathVariable Long userId) {
         return ResponseEntity.ok(userService.findAllVehicles(userId));
@@ -46,6 +48,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user));
     }
 
+    @CircuitBreaker(name = "cars", fallbackMethod = "fallBackSaveCar")
     @PostMapping("/car/{userId}")
     public ResponseEntity<?> saveCar(@Validated @RequestBody Car car, BindingResult result, @PathVariable Long userId) {
         if (userService.findById(userId).isEmpty()) return ResponseEntity.notFound().build();
@@ -54,8 +57,9 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.saveCar(car));
     }
 
+    @CircuitBreaker(name = "bikes", fallbackMethod = "fallBackSaveBike")
     @PostMapping("/bike/{userId}")
-    public ResponseEntity<?> saveCar(@Validated @RequestBody Bike bike, BindingResult result, @PathVariable Long userId) {
+    public ResponseEntity<?> saveBike(@Validated @RequestBody Bike bike, BindingResult result, @PathVariable Long userId) {
         if (userService.findById(userId).isEmpty()) return ResponseEntity.notFound().build();
         if (result.hasErrors()) return this.validar(result);
         bike.setUserId(userId);
@@ -86,6 +90,21 @@ public class UserController {
         result.getFieldErrors()
                 .forEach( error -> errores.put(error.getField(), "El campo ".concat(error.getField().concat(" ").concat(Objects.requireNonNull(error.getDefaultMessage())))));
         return ResponseEntity.badRequest().body(errores);
+    }
+
+    public ResponseEntity<?> fallBackFindAllVehicles(@PathVariable Long userId, RuntimeException exception) {
+        String mensaje = "El usuario blablabla";
+        return ResponseEntity.ok(mensaje);
+    }
+
+    public ResponseEntity<?> fallBackSaveCar(@Validated @RequestBody Car car, BindingResult result, @PathVariable Long userId, RuntimeException exception) {
+        String mensaje = "El usuario blablabla";
+        return ResponseEntity.ok(mensaje);
+    }
+
+    public ResponseEntity<?> fallBackSaveBike(@Validated @RequestBody Bike bike, BindingResult result, @PathVariable Long userId, RuntimeException exception) {
+        String mensaje = "El usuario blablabla";
+        return ResponseEntity.ok(mensaje);
     }
 
 }
