@@ -11,33 +11,30 @@ eureka:
 
 resilience4j.circuitbreaker:
   instances:
-    bikes:
-      registerHealthIndicator: true
-      slidingWindowSize: 10
-      permittedNumberOfCallsInHalfOpenState: 3
-      slidingWindowType: TIME_BASED
-      minimumNumberOfCalls: 20
-      waitDurationInOpenState: 50s
-      failureRateThreshold: 50
-      eventConsumerBufferSize: 10
-      recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
     cars:
       registerHealthIndicator: true
       slidingWindowSize: 10
       permittedNumberOfCallsInHalfOpenState: 3
       slidingWindowType: TIME_BASED
-      minimumNumberOfCalls: 20
-      waitDurationInOpenState: 50s
+      minimumNumberOfCalls: 4
+      waitDurationInOpenState: 5s
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
-      recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
+    bikes:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 3
+      slidingWindowType: TIME_BASED
+      minimumNumberOfCalls: 4
+      waitDurationInOpenState: 5s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 10
     all:
       registerHealthIndicator: true
       slidingWindowSize: 10
       permittedNumberOfCallsInHalfOpenState: 3
       slidingWindowType: TIME_BASED
-      minimumNumberOfCalls: 20
-      waitDurationInOpenState: 50s
+      minimumNumberOfCalls: 4
+      waitDurationInOpenState: 5s
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
-      recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate

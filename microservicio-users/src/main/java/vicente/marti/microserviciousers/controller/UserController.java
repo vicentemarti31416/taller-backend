@@ -94,17 +94,17 @@ public class UserController {
 
     public ResponseEntity<?> fallBackFindAllVehicles(@PathVariable Long userId, RuntimeException exception) {
         String mensaje = "El usuario blablabla";
-        return ResponseEntity.ok(mensaje);
+        return new ResponseEntity<>(mensaje, HttpStatus.OK);
     }
 
     public ResponseEntity<?> fallBackSaveCar(@Validated @RequestBody Car car, BindingResult result, @PathVariable Long userId, RuntimeException exception) {
         String mensaje = "El usuario blablabla";
-        return ResponseEntity.ok(mensaje);
+        return new ResponseEntity<>(mensaje, HttpStatus.OK);
     }
 
     public ResponseEntity<?> fallBackSaveBike(@Validated @RequestBody Bike bike, BindingResult result, @PathVariable Long userId, RuntimeException exception) {
         String mensaje = "El usuario blablabla";
-        return ResponseEntity.ok(mensaje);
+        return new ResponseEntity<>(mensaje, HttpStatus.OK);
     }
 
 }
