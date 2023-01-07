@@ -20,6 +20,7 @@ spring:
         - id: microservicio-users
           uri: lb://microservicio-users
           predicates: Path=/users/**
+          filters: AuthFilter
         - id: microservicio-cars
           uri: lb://microservicio-cars
           predicates: Path=/cars/**
