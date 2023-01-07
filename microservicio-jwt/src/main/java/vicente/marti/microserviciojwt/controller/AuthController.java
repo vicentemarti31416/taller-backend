@@ -41,4 +41,12 @@ public class AuthController {
         JwtTokenDto jwtTokenDto = userEntityService.login(dto);
         return ResponseEntity.ok(jwtTokenDto);
     }
+
+    @PostMapping("/validate")
+    public ResponseEntity<JwtTokenDto> validate(@RequestParam String token){
+        JwtTokenDto tokenDto = userEntityService.validate(token);
+        if(tokenDto == null)
+            return ResponseEntity.badRequest().build();
+        return ResponseEntity.ok(tokenDto);
+    }
 }

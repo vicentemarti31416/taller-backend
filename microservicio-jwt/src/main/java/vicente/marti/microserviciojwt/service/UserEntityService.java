@@ -66,6 +66,16 @@ public class UserEntityService {
         return new JwtTokenDto(token);
     }
 
+
+    public JwtTokenDto validate(String token) {
+        if(!jwtProvider.validateToken(token))
+            return null;
+        String username = jwtProvider.getUsernameFromToken(token);
+        if(userEntityRepository.findByUsernameOrEmail(username, username).isEmpty())
+            return null;
+        return new JwtTokenDto(token);
+    }
+
     // private methods
     private UserEntity mapUserFromDto(CreateUserDto dto) {
         String password = passwordEncoder.encode(dto.getPassword());
