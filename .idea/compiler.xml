@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservicio-config" />
+        <module name="microservicio-jwt" />
+        <module name="microservicio-bikes" />
         <module name="microservicio-eureka" />
         <module name="microservicio-users" />
         <module name="microservicio-gateway" />
         <module name="microservicio-cars" />
-        <module name="microservicio-bikes" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +22,7 @@
       <module name="microservicio-config" target="19" />
       <module name="microservicio-eureka" target="19" />
       <module name="microservicio-gateway" target="19" />
+      <module name="microservicio-jwt" target="19" />
       <module name="microservicio-users" target="19" />
     </bytecodeTargetLevel>
   </component>
@@ -31,6 +33,7 @@
       <module name="microservicio-config" options="-parameters" />
       <module name="microservicio-eureka" options="-parameters" />
       <module name="microservicio-gateway" options="-parameters" />
+      <module name="microservicio-jwt" options="-parameters" />
       <module name="microservicio-users" options="-parameters" />
     </option>
   </component>

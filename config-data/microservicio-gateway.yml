@@ -26,3 +26,6 @@ spring:
         - id: microservicio-bikes
           uri: lb://microservicio-bikes
           predicates: Path=/bikes/**
+        - id: microservicio-jwt
+          uri: lb://microservicio-jwt
+          predicates: Path=/auth/**
