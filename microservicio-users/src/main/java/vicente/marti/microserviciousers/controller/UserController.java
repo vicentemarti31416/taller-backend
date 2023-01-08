@@ -68,7 +68,7 @@ public class UserController {
         Optional<User> optional = userService.findById(id);
         if (optional.isEmpty()) return ResponseEntity.notFound().build();
         User userDb = optional.get();
-        userDb.setName(user.getName());
+        userDb.setUsername(user.getUsername());
         userDb.setEmail(user.getEmail());
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(userDb));
     }

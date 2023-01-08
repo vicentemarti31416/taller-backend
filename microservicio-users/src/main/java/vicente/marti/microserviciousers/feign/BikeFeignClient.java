@@ -10,7 +10,7 @@ import vicente.marti.microserviciobikes.entity.Bike;
 
 import java.util.List;
 
-@FeignClient(name = "microservicio-bikes", url = "http://localhost:8001")
+@FeignClient(name = "microservicio-bikes")
 public interface BikeFeignClient {
 
     @PostMapping("/bikes/")
